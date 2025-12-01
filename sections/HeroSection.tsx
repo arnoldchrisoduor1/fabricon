@@ -254,7 +254,7 @@ const HeroSection = () => {
         >
 
           {/* Stats Card */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-gray-50 to-white rounded-xl border border-gray-200">
+          <div className="mt-6 p-4 bg-linear-to-r from-gray-50 to-white rounded-xl border border-gray-200">
             <div className="flex justify-between items-center mb-4">
               <motion.div
                 className="bg-secondary-green/20 p-2 rounded-lg"
