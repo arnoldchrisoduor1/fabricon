@@ -3,4 +3,25 @@
 @theme {
   --color-primary-green: #0C363C;
   --color-secondary-green: #E3FFCD;
+  --color-third-green: #19A97F;
+}
+
+/* Optional: Custom scroll behavior for better mobile experience */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-auto-rows: minmax(200px, auto);
+  }
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }

@@ -1,7 +1,8 @@
 "use client";
-import { House, Menu, X, Home, Info, Settings, Phone } from "lucide-react";
+import { House, Menu, X, Home, Info, Settings, Phone, MoveUpRight } from "lucide-react";
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Button from "./ui/Button";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,8 +103,16 @@ const Navigation = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative max-w-[1200px] mx-auto">
       {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center justify-between">
+        <motion.span 
+          className="font-bold text-lg"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          FabriCon
+        </motion.span>
       <div className="hidden md:flex justify-center items-center gap-8 p-4">
         {majorSections.map((section) => (
           <motion.a
@@ -132,6 +141,12 @@ const Navigation = () => {
           </motion.a>
         ))}
       </div>
+      <div>
+        <Button variant="primary" size="sm">
+            Sign In
+          </Button>
+      </div>
+      </div>
 
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center p-4 bg-white border-b">
@@ -143,15 +158,9 @@ const Navigation = () => {
           FabriCon
         </motion.span>
         <div className="flex gap-3 items-center">
-          <motion.button
-            variants={signUpButtonVariants}
-            initial="initial"
-            whileHover="hover"
-            whileTap="tap"
-            className="bg-primary-green text-white px-4 py-1.5 rounded-full text-sm font-medium"
-          >
-            Sign Up
-          </motion.button>
+          <Button variant="primary" size="sm">
+            Sign In
+          </Button>
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 rounded-lg hover:bg-gray-100"
