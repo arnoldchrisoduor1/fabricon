@@ -47,7 +47,7 @@ const Navigation = () => {
       y: -20,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     },
     open: {
@@ -55,7 +55,7 @@ const Navigation = () => {
       y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         staggerChildren: 0.05,
         delayChildren: 0.1
       }

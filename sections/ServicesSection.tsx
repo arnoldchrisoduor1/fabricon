@@ -93,14 +93,14 @@ const ServicesSection = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: "easeOut" as const }
     }
   };
 
   return (
     <section className="relative bg-linear-to-b from-primary-green to-primary-green/90 py-16 md:py-24 overflow-hidden mt-20">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-grid-white/10 bg-[size:20px_20px]" />
+      <div className="absolute inset-0 bg-grid-white/10 bg-size-[20px_20px]" />
       <div className="absolute top-0 left-0 w-72 h-72 bg-secondary-green/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-green/30 rounded-full blur-3xl" />
       

@@ -31,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       transition: {
         duration: 0.5,
         delay: delay,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     },
     hover: {

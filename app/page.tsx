@@ -1,4 +1,5 @@
 import Benefits from "@/sections/BenefitsSection";
+import FeaturedCompanies from "@/sections/FeaturedCompanies";
 import HeroSection from "@/sections/HeroSection";
 import PricingSection from "@/sections/PricingSection";
 import ServicesSection from "@/sections/ServicesSection";
@@ -11,6 +12,7 @@ export default function Home() {
       <ServicesSection />
       <Benefits />
       <PricingSection />
+      <FeaturedCompanies />
     </div>
   );
 }
